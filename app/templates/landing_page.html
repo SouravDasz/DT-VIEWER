@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DT Viewer - Visualize and Understand Decision Trees</title>
+    <!-- Load local Tailwind CSS -->
+    <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet">
+    <!-- Embed the Inter font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    </style>
+</head>
+<!-- Apply the ultra-dark background to the body -->
+
+<body class="font-sans bg-background-light text-text-dark">
+
+    <!-- Header/Navigation Bar -->
+    <header class="bg-card-bg shadow-2xl shadow-black/40 sticky top-0 z-10 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-2xl font-extrabold text-leaf-green tracking-tight">
+                DT Viewer
+            </div>
+            <!-- Text color in navigation is now text-secondary (light gray) -->
+            <nav class="hidden md:flex space-x-6 text-text-secondary">
+                <a href="#features" class="hover:text-primary-green transition duration-150">Features</a>
+                <a href="#" class="hover:text-primary-green transition duration-150">Docs</a>
+                <a href="#" class="hover:text-primary-green transition duration-150">About</a>
+            </nav>
+            <a href="/home"
+                class="px-4 py-2 bg-primary-green text-white text-sm font-semibold rounded-full shadow-md hover:bg-leaf-green transition duration-300 transform hover:scale-105">
+                Start Exploring
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="relative py-20 md:py-28 lg:py-36 overflow-hidden">
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+            <!-- Main Headline -->
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-text-dark leading-tight mb-4">
+                <span class="block">Explore the <span class="text-leaf-green">Roots</span> and</span>
+                <span class="block text-primary-green">Branching Decisions</span>
+            </h1>
+
+            <!-- Subtitle/Description -->
+            <p class="mt-6 text-xl text-text-secondary max-w-3xl mx-auto">
+                DT Viewer is specifically designed to bring clarity to Decision Tree models, revealing the logic behind
+                every node and split with a natural, organic flow.
+            </p>
+
+            <!-- Call to Action (CTA) Button -->
+            <div class="mt-10 flex justify-center space-x-4">
+                <a href="/home"
+                    class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-full shadow-xl text-white bg-primary-green hover:bg-leaf-green transition duration-300 transform hover:-translate-y-1 hover:shadow-primary-green/50 focus:outline-none focus:ring-4 focus:ring-primary-green/50">
+                    Get Started Now
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Features Section (Using the card-bg for the section background) -->
+    <section id="features" class="py-16 bg-card-bg border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-text-dark mb-12">Core Application Features</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Feature 1: Pre-trained Model Loading -->
+                <div
+                    class="p-6 bg-feature-bg rounded-2xl shadow-2xl shadow-black/30 border border-gray-700 transition duration-300 hover:shadow-primary-green/20 hover:border-primary-green">
+                    <div class="text-3xl text-primary-green mb-4">
+                        <!-- Icon: Upload/Load -->
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-text-dark mb-2">Pre-Trained Model Import</h3>
+                    <p class="text-text-secondary">
+                        Load existing Decision Tree or Random Forest models instantly from standard file formats for
+                        immediate viewing and analysis.
+                    </p>
+                </div>
+
+                <!-- Feature 2: Hyperparameter Tuning -->
+                <div
+                    class="p-6 bg-feature-bg rounded-2xl shadow-2xl shadow-black/30 border border-gray-700 transition duration-300 hover:shadow-primary-green/20 hover:border-primary-green">
+                    <div class="text-3xl text-primary-green mb-4">
+                        <!-- Icon: Settings/Tune -->
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-text-dark mb-2">Hyperparameter Control</h3>
+                    <p class="text-text-secondary">
+                        Modify key parameters (max depth, min samples, etc.) via user input to visualize pruning and
+                        complexity changes in real-time.
+                    </p>
+                </div>
+
+                <!-- Feature 3: Deep Visualization -->
+                <div
+                    class="p-6 bg-feature-bg rounded-2xl shadow-2xl shadow-black/30 border border-gray-700 transition duration-300 hover:shadow-primary-green/20 hover:border-primary-green">
+                    <div class="text-3xl text-primary-green mb-4">
+                        <!-- Icon: Visualization/Chart -->
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 19V6l2-2 2 2v13M10 16H8m5 0h-2M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-text-dark mb-2">Deep Tree Visualization</h3>
+                    <p class="text-text-secondary">
+                        A full-scale, interactive tree map allows you to pan, zoom, and inspect every node split,
+                        impurity, and sample count.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-card-bg text-text-secondary mt-12 border-t border-primary-green/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+            <p class="text-sm">&copy; 2025 DT Viewer. All rights reserved. Interpret the forest, one tree at a time.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
